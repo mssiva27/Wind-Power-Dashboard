@@ -1,21 +1,4 @@
-/*!
 
-=========================================================
-* Light Bootstrap Dashboard React - v1.3.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-/*eslint-disable*/
 import React, { Component } from "react";
 import Toggle from "react-toggle";
 
@@ -182,7 +165,7 @@ class FixedPlugin extends Component {
             <li className="button-container">
               <div className="">
                 <a
-                  href="https://www.creative-tim.com/product/light-bootstrap-dashboard-react?ref=lbdr-fixed-plugin"
+                  href=""
                   target="_blank"
                   className="btn btn-success btn-block btn-fill"
                 >
@@ -193,7 +176,7 @@ class FixedPlugin extends Component {
             <li className="button-container">
               <div className="">
                 <a
-                  href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react?ref=lbdr-fixed-plugin"
+                  href=""
                   target="_blank"
                   className="btn btn-warning btn-block btn-fill"
                 >
@@ -203,7 +186,7 @@ class FixedPlugin extends Component {
             </li>
             <li className="button-container">
               <a
-                href="https://demos.creative-tim.com/light-bootstrap-dashboard-react/#/documentation/getting-started?ref=lbdr-fixed-plugin"
+                href=""
                 target="_blank"
                 className="btn btn-fill btn-info"
               >
