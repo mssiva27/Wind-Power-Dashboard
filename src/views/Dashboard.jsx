@@ -58,19 +58,16 @@ class Dashboard extends Component {
             </Col>
             <Col lg={3} sm={6}>
               <StatsCard
-                bigIcon={<img src = {logo2} height={75}
-                width={75} />}
-                
+                bigIcon={<img src = {logo2} height={60} width={60} />}                
                 statsText="Price of  H2"
                 statsValue="$16/KG "
                 statsIcon={<i className="fa fa-clock-o" />}
-                statsIconText="as of 06/25"
+                statsIconText="as of 06/26"
               />
             </Col>
             <Col lg={3} sm={6}>
               <StatsCard
-                bigIcon={<img src = {logo1} height={75}
-                width={75} />}
+                bigIcon={<img src = {logo1} height={60} width={60} />}
                 statsText="Wind energy"
                 statsValue="+45"
                 statsIcon={<i className="fa fa-refresh" />}
