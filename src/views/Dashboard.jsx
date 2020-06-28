@@ -1,5 +1,5 @@
 
-import React, { Component } from "react";
+import React, {Component } from "react";
 import ChartistGraph from "react-chartist";
 import { Grid, Row, Col } from "react-bootstrap";
 import logo1 from './wind.jpg';
@@ -22,6 +22,13 @@ import {
 
 class Dashboard extends Component {
 
+  constructor(props) {
+    super(props);
+ 
+    this.state = {
+      data: null,
+    };
+  }
   
   createLegend(json) {
     var legend = [];
@@ -32,7 +39,29 @@ class Dashboard extends Component {
       legend.push(json["names"][i]);
     }
     return legend;
+}
+
+
+async getFetch() {
+  let url = 'http://api.eia.gov/series/?api_key=2178a1e50f61a4aa4c1c11c1b7b83169&series_id=TOTAL.DFONUUS.A'
+  console.log("url " + url)
+        
+      const fetchResult = fetch(url)
+      console.log(fetchResult);
+      const response = await fetchResult;
+      const jsonData = await response.json();
+      console.log(jsonData);
+
+      {
+        fetch(url)
+          .then(response => response.json())
+          .then(data => this.setState(data));
+          console.log(data);
+      }
+
   }
+
+  
   render() {
     return (
       <div className="content">
@@ -67,7 +96,7 @@ class Dashboard extends Component {
             </Col>
             <Col lg={3} sm={6}>
               <StatsCard
-                bigIcon={<img src = {logo1} height={60} width={60} />}
+                bigIcon={<img src = {this.getFetch()} height={60} width={60} />}
                 statsText="Wind energy"
                 statsValue="+45"
                 statsIcon={<i className="fa fa-refresh" />}
