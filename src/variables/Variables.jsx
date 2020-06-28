@@ -483,26 +483,28 @@ var legendPie = {
 // Data for Line Chart
 var dataSales = {
   labels: [
-    "9:00AM",
-    "12:00AM",
-    "3:00PM",
-    "6:00PM",
-    "9:00PM",
-    "12:00PM",
-    "3:00AM",
-    "6:00AM"
+    "06/17",
+    "06/18",
+    "06/19",
+    "06/20",
+    "06/21",
+    "06/22",
+    "06/23",
+    "06/24",
+    "06/25",
+    "06/26"
   ],
   series: [
-    [287, 385, 490, 492, 554, 586, 698, 695],
-    [67, 152, 143, 240, 287, 335, 435, 437],
-    [23, 113, 67, 108, 190, 239, 307, 308]
+    [330, 385, 490, 492, 554, 586, 698, 695,700,725],
+    [222, 232, 243, 240, 300, 350, 435, 437,455, 475],
+    [23, 46, 67, 108, 190, 239, 307, 308, 325, 350]
   ]
 };
 var optionsSales = {
   low: 0,
   high: 800,
   showArea: false,
-  height: "245px",
+  height: "300px",
   axisX: {
     showGrid: false
   },
@@ -527,7 +529,7 @@ var responsiveSales = [
   ]
 ];
 var legendSales = {
-  names: ["Open", "Click", "Click Second Time"],
+  names: ["Actual", "Mean", "Projected"],
   types: ["info", "danger", "warning"]
 };
 
