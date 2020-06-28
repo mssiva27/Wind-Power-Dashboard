@@ -30,6 +30,8 @@ class Dashboard extends Component {
     };
   }
   
+  
+
   createLegend(json) {
     var legend = [];
     for (var i = 0; i < json["names"].length; i++) {
@@ -39,6 +41,7 @@ class Dashboard extends Component {
       legend.push(json["names"][i]);
     }
     return legend;
+    
 }
 
 
@@ -52,12 +55,7 @@ async getFetch() {
       const jsonData = await response.json();
       console.log(jsonData);
 
-      {
-        fetch(url)
-          .then(response => response.json())
-          .then(data => this.setState(data));
-          console.log(data);
-      }
+      
 
   }
 
@@ -79,6 +77,7 @@ async getFetch() {
             <Col lg={3} sm={6}>
               <StatsCard
                 bigIcon={<i className="pe-7s-wallet text-success" />}
+                bigIcon={<img src = {this.getFetch()} height={60} width={60} />}
                 statsText="Projection"
                 statsValue="$1,345"
                 statsIcon={<i className="fa fa-calendar-o" />}
@@ -96,14 +95,14 @@ async getFetch() {
             </Col>
             <Col lg={3} sm={6}>
               <StatsCard
-                bigIcon={<img src = {this.getFetch()} height={60} width={60} />}
+                bigIcon={<img src = {logo1} height={60} width={60} />}
                 statsText="Wind energy"
                 statsValue="+45"
                 statsIcon={<i className="fa fa-refresh" />}
                 statsIconText="Updated now"
               />
             </Col>
-          </Row>
+            </Row>
           <Row>
             <Col md={8}>
               <Card
